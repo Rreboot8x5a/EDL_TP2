@@ -26,8 +26,14 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $date_naissance3="1982-12-31"; // a changer
     private $lieu_naissance3="ZZZ3"; // a changer
     // cours
-    private $intitule="tgoc"; //a remplir
-    private $duree="21";    //a remplir
+    private $intitule1="IOT"; //a remplir
+    private $duree1="10";    //a remplir
+    private $intitule2="IA"; //a remplir
+    private $duree2="12";    //a remplir
+    private $intitule3="C++"; //a remplir
+    private $duree3="18";    //a remplir
+    private $intitule4="EDL"; //a remplir
+    private $duree4="30";    //a remplir
     
         
     public function setUp()
@@ -66,7 +72,10 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         echo "\n.....affichage max idc\n";
         echo $max_id3;
 
-        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule,$this->duree,$this->gumballMachineInstance->getIdP("XXX1","YYY1")));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule1,$this->duree1,$this->gumballMachineInstance->getIdP("XXX2","YYY2")));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule2,$this->duree2,$this->gumballMachineInstance->getIdP("XXX1","YYY1")));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule3,$this->duree3,$this->gumballMachineInstance->getIdP("XXX3","YYY3")));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule4,$this->duree4,$this->gumballMachineInstance->getIdP("XXX3","YYY3")));
         $max_id2=$this->gumballMachineInstance->GetLastIDC();
         
         $this->assertEquals($max_id3+1,$max_id2);
