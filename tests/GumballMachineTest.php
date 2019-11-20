@@ -73,10 +73,10 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         echo $max_id3;
 
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule1,$this->duree1,$this->gumballMachineInstance->getIdP("XXX2","YYY2")));
-        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule2,$this->duree2,$this->gumballMachineInstance->getIdP("XXX1","YYY1")));
+        /*$this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule2,$this->duree2,$this->gumballMachineInstance->getIdP("XXX1","YYY1")));
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule3,$this->duree3,$this->gumballMachineInstance->getIdP("XXX3","YYY3")));
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule4,$this->duree4,$this->gumballMachineInstance->getIdP("XXX3","YYY3")));
-        $max_id2=$this->gumballMachineInstance->GetLastIDC();
+        */$max_id2=$this->gumballMachineInstance->GetLastIDC();
         
         $this->assertEquals($max_id3+4,$max_id2);
         
