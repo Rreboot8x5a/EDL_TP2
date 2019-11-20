@@ -71,6 +71,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         $max_id3=$this->gumballMachineInstance->GetLastIDC();
         echo "\n.....affichage max idc\n";
         echo $max_id3;
+        echo "\n";
 
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule1,$this->duree1,$this->gumballMachineInstance->getIdP("XXX2","YYY2")));
         /*$this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->intitule2,$this->duree2,$this->gumballMachineInstance->getIdP("XXX1","YYY1")));
