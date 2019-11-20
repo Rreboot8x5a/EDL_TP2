@@ -33,23 +33,26 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testAffichageProfAPI()
     {
-        /*à completer*/
+        /*Ã  completer*/
     }
      
     
     public function testAffichageCoursAVI()
     {
-        /*à completer*/
+        /*Ã  completer*/
     }
     public function testInsertC()
     {
        
-        /*à completer*/
+        $max__id1=$this->gumballMachineInstance->GetLastIDP();
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule,$this->duree,$this->id_prof));
+        $max__id2=$this->gumballMachineInstance->GetLastIDP();
+        $this->assertEquals($max__id1+1,$max__id2);
         
     }
     public function testAffichageCoursAPI()
     {
-        /*à completer*/
+        /*Ã  completer*/
     }
 
    
